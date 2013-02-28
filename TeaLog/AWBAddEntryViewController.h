@@ -1,5 +1,5 @@
 //
-//  AWBViewController.h
+//  AWBAddEntryViewController.h
 //  TeaLog
 //
 //  Created by Andrew Braunstein on 2/28/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AWBViewController : UIViewController
+@interface AWBAddEntryViewController : UIViewController
 
 @end

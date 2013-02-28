@@ -1,23 +1,151 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="YQc-vN-V8O">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="AWBViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="AWBDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="vUb-lY-xBJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="708" y="980"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LP0-Nf-xIe">
+            <objects>
+                <viewController id="1Nj-Ov-rfe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SHo-ZU-kqj">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDv-YY-9yr">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="L8z-qD-eFu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="List">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jsq-RJ-qc8" kind="push" id="oMY-xe-bVN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnS-kQ-OWA">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Of5-xn-6rC" kind="push" id="OH7-FI-QCN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dnS-kQ-OWA" firstAttribute="trailing" secondItem="NDv-YY-9yr" secondAttribute="trailing" type="default" id="DbQ-e5-2CQ"/>
+                            <constraint firstItem="NDv-YY-9yr" firstAttribute="centerX" secondItem="SHo-ZU-kqj" secondAttribute="centerX" type="default" id="Jkk-gI-qji"/>
+                            <constraint firstAttribute="bottom" secondItem="dnS-kQ-OWA" secondAttribute="bottom" constant="201" id="dm7-kJ-WK1"/>
+                            <constraint firstItem="dnS-kQ-OWA" firstAttribute="leading" secondItem="NDv-YY-9yr" secondAttribute="leading" type="default" id="pSG-nY-eCv"/>
+                            <constraint firstItem="NDv-YY-9yr" firstAttribute="top" secondItem="SHo-ZU-kqj" secondAttribute="top" constant="122" id="vXT-zP-1pa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hB3-XH-ukX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EVt-Gd-VsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266" y="980"/>
+        </scene>
+        <!--Add Entry View Controller-->
+        <scene sceneID="uEp-de-u28">
+            <objects>
+                <viewController id="Of5-xn-6rC" customClass="AWBAddEntryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d3D-J2-odb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xDA-uA-jXz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0VF-eL-zjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266" y="1736"/>
+        </scene>
+        <!--Table View Controller - Tea Log-->
+        <scene sceneID="LLA-za-fy5">
+            <objects>
+                <tableViewController id="jsq-RJ-qc8" customClass="AWBTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ffv-ig-IzN">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Enrty Cell" id="tLm-mi-doW">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="2" kind="push" id="zoY-U0-7ih"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tea Log" id="yp7-YV-J8g"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ET9-oa-R25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225" y="980"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SAW-33-jV0">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="YQc-vN-V8O" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L0c-zB-UNy">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1Nj-Ov-rfe" kind="relationship" relationship="rootViewController" id="Kwj-Su-LOC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcM-fW-qY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-939" y="980"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AWBAddEntryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AWBAddEntryViewController.h"/>
+        </class>
+        <class className="AWBDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AWBDetailViewController.h"/>
+        </class>
+        <class className="AWBTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AWBTableViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
