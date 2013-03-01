@@ -20,20 +20,20 @@
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+  self = [super initWithStyle:style];
+  if (self) {
+    // Custom initialization
+  }
+  return self;
 }
 
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-
+  
   // Uncomment the following line to preserve selection between presentations.
   // self.clearsSelectionOnViewWillAppear = NO;
- 
+  
   // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
   self.navigationItem.rightBarButtonItem = self.editButtonItem;
   
@@ -41,14 +41,20 @@
   
   AWBTeaLogEntry * entry = [[AWBTeaLogEntry alloc] init];
   entry.name = @"Iron Goddess Oolong";
+  entry.note = @"This tea has a very aromatic taste. An oolong to be sought after. Using the Hamptons honey was a good idea";
+  entry.location = CLLocationCoordinate2DMake(39.953689, -75.206410);
+  entry.date = [[NSDate alloc] init];
+  entry.brewTime = @3;
+  entry.rating = @80;
+  
   [self.entries addObject:entry];
   [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
+  // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -62,7 +68,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   // Return the number of rows in the section.
-  NSLog(@"%d", [self.entries count]);
   return [self.entries count];
 
 }
@@ -79,55 +84,54 @@
   return cell;
 }
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+  // Return NO if you do not want the specified item to be editable.
+  return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+  if (editingStyle == UITableViewCellEditingStyleDelete) {
+    // Delete the row from the data source
+    [self.entries removeObjectAtIndex:indexPath.row];
+    
+    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+  }
+  else if (editingStyle == UITableViewCellEditingStyleInsert) {
+    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+  }
 }
-*/
 
-/*
+
+
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
 }
-*/
+
 
 /*
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
 }
 */
 
-#pragma mark - Table view delegate
+#pragma mark - Segue
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  // Navigation logic may go here. Create and push another view controller.
-    
-  AWBDetailViewController *detailViewController = [[AWBDetailViewController alloc] init];
-  // ...
-  // Pass the selected object to the new view controller.
-  [self.navigationController pushViewController:detailViewController animated:YES]; 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  AWBDetailViewController * detail = [segue destinationViewController];
+  if ([detail view]) {
+    [detail setEntry:[self.entries objectAtIndex:[self.tableView indexPathForSelectedRow].row]];
+  }
 }
 
 @end

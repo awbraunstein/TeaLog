@@ -17,7 +17,7 @@
 @property (strong, nonatomic) NSNumber * rating;
 
 @property (strong, nonatomic) NSDate * date;
-@property CLLocationCoordinate2D * location;
+@property CLLocationCoordinate2D location;
 
 
 
