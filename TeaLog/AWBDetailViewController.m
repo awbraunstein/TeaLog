@@ -10,6 +10,8 @@
 
 @interface AWBDetailViewController ()
 
+@property BOOL mapLoaded;
+
 @end
 
 @implementation AWBDetailViewController
@@ -30,6 +32,7 @@
   self.notesLabel.lineBreakMode = NSLineBreakByWordWrapping;
   self.notesLabel.numberOfLines = 0;
   self.map.delegate = self;
+  self.mapLoaded = NO;
   
 }
 
@@ -60,10 +63,13 @@
   self.map.region = region;
 }
 
-#pragma mark - MKMapViewDelegat methods
+#pragma mark - MKMapViewDelegate methods
 
 - (void) mapViewDidFinishLoadingMap:(MKMapView *)mapView {
-  [self addPinToMapAtLocation:self.entry.location];
+  if (!self.mapLoaded) {
+    [self addPinToMapAtLocation:self.entry.location];
+    self.mapLoaded = YES;
+  }
 }
 
 @end
