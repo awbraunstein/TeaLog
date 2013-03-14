@@ -36,18 +36,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyD-dx-OaO">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="226" id="Bp3-dE-Ej3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jOw-gh-fOE">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="208" id="3xf-No-Bi5"/>
-                                    <constraint firstAttribute="width" constant="325" id="Typ-6n-iKr"/>
+                                    <constraint firstAttribute="height" constant="151" id="lWa-Wf-P0x"/>
                                 </constraints>
                             </mapView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lah-v9-MXb">
@@ -66,28 +57,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="vB5-hP-fqy" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="86Z-HA-LBJ"/>
-                            <constraint firstItem="hyK-vW-3tK" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Eo0-Pl-vCr"/>
-                            <constraint firstItem="vB5-hP-fqy" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="N0x-71-eTs"/>
-                            <constraint firstItem="Lah-v9-MXb" firstAttribute="baseline" secondItem="bbU-6y-JuK" secondAttribute="baseline" type="default" id="SKE-FM-7qu"/>
-                            <constraint firstItem="5Bf-mg-vta" firstAttribute="baseline" secondItem="hyK-vW-3tK" secondAttribute="baseline" type="default" id="YoG-lr-i7R"/>
-                            <constraint firstItem="jOw-gh-fOE" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="bM0-JS-518"/>
-                            <constraint firstItem="Lah-v9-MXb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bMi-g2-NQd"/>
-                            <constraint firstItem="Lah-v9-MXb" firstAttribute="trailing" secondItem="hyK-vW-3tK" secondAttribute="trailing" type="default" id="jlj-Ho-hNe"/>
-                            <constraint firstItem="Lah-v9-MXb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="174" id="jtf-zL-bAu"/>
-                            <constraint firstItem="EyD-dx-OaO" firstAttribute="top" secondItem="3" secondAttribute="top" constant="11" id="k2w-eJ-bhE"/>
-                            <constraint firstItem="vB5-hP-fqy" firstAttribute="top" secondItem="EyD-dx-OaO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="km2-HU-WVB"/>
-                            <constraint firstItem="jOw-gh-fOE" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="t5s-qY-lWY"/>
-                            <constraint firstItem="hyK-vW-3tK" firstAttribute="top" secondItem="3" secondAttribute="top" constant="136" id="tOE-LM-zCx"/>
-                            <constraint firstItem="EyD-dx-OaO" firstAttribute="trailing" secondItem="5Bf-mg-vta" secondAttribute="trailing" type="default" id="tna-v2-ixz"/>
-                            <constraint firstItem="EyD-dx-OaO" firstAttribute="centerX" secondItem="vB5-hP-fqy" secondAttribute="centerX" type="default" id="wDE-H7-HaO"/>
+                            <constraint firstItem="Lah-v9-MXb" firstAttribute="leading" secondItem="hyK-vW-3tK" secondAttribute="leading" type="default" id="1gt-hR-e5s"/>
+                            <constraint firstItem="jOw-gh-fOE" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="BRR-jC-6fl"/>
+                            <constraint firstAttribute="trailing" secondItem="vB5-hP-fqy" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Cq8-1j-uio"/>
+                            <constraint firstItem="vB5-hP-fqy" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="DG6-rg-fEt"/>
+                            <constraint firstItem="Lah-v9-MXb" firstAttribute="trailing" secondItem="hyK-vW-3tK" secondAttribute="trailing" type="default" id="GWb-xJ-nKt"/>
+                            <constraint firstItem="5Bf-mg-vta" firstAttribute="baseline" secondItem="hyK-vW-3tK" secondAttribute="baseline" type="default" id="GnK-DO-wuU"/>
+                            <constraint firstItem="hyK-vW-3tK" firstAttribute="top" secondItem="3" secondAttribute="top" constant="170" id="HBr-nE-C8K"/>
+                            <constraint firstItem="jOw-gh-fOE" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="ZnI-c7-lZv"/>
+                            <constraint firstAttribute="bottom" secondItem="vB5-hP-fqy" secondAttribute="bottom" constant="55" id="bTw-86-dQ4"/>
+                            <constraint firstItem="bbU-6y-JuK" firstAttribute="baseline" secondItem="Lah-v9-MXb" secondAttribute="baseline" type="default" id="ecE-fM-0DB"/>
+                            <constraint firstItem="5Bf-mg-vta" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="133" id="hvH-4n-aR1"/>
+                            <constraint firstItem="hyK-vW-3tK" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="14" id="j05-lP-PcU"/>
+                            <constraint firstItem="jOw-gh-fOE" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="oX6-fQ-Mzu"/>
+                            <constraint firstAttribute="bottom" secondItem="Lah-v9-MXb" secondAttribute="bottom" constant="169" id="yXz-7C-HPw"/>
                             <constraint firstItem="bbU-6y-JuK" firstAttribute="leading" secondItem="5Bf-mg-vta" secondAttribute="leading" type="default" id="zgk-oc-3yR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vUb-lY-xBJ"/>
                     <connections>
                         <outlet property="brewTimeLabel" destination="5Bf-mg-vta" id="Krn-yE-nDi"/>
-                        <outlet property="dateLabel" destination="EyD-dx-OaO" id="LQN-si-gNv"/>
                         <outlet property="map" destination="jOw-gh-fOE" id="UWP-Bg-lCS"/>
                         <outlet property="notesLabel" destination="vB5-hP-fqy" id="6yn-1U-irq"/>
                         <outlet property="ratingLabel" destination="bbU-6y-JuK" id="0qa-uf-YG2"/>
@@ -105,14 +94,14 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDv-YY-9yr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDv-YY-9yr">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="L8z-qD-eFu"/>
+                                    <constraint firstAttribute="height" constant="100" id="0g6-W9-F9t"/>
+                                    <constraint firstAttribute="width" constant="100" id="jh6-1q-4Wt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="List">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                                <state key="normal" title="List" backgroundImage="iTunesArtwork.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -122,9 +111,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnS-kQ-OWA">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="FEl-aF-Sc3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                                <state key="normal" title="Brew" backgroundImage="iTunesArtwork@2x.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -135,13 +127,13 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.083614313978432206" green="0.40878109056122447" blue="0.12084535519431246" alpha="0.91000000000000003" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="dnS-kQ-OWA" firstAttribute="trailing" secondItem="NDv-YY-9yr" secondAttribute="trailing" type="default" id="DbQ-e5-2CQ"/>
-                            <constraint firstItem="NDv-YY-9yr" firstAttribute="centerX" secondItem="SHo-ZU-kqj" secondAttribute="centerX" type="default" id="Jkk-gI-qji"/>
-                            <constraint firstAttribute="bottom" secondItem="dnS-kQ-OWA" secondAttribute="bottom" constant="201" id="dm7-kJ-WK1"/>
-                            <constraint firstItem="dnS-kQ-OWA" firstAttribute="leading" secondItem="NDv-YY-9yr" secondAttribute="leading" type="default" id="pSG-nY-eCv"/>
-                            <constraint firstItem="NDv-YY-9yr" firstAttribute="top" secondItem="SHo-ZU-kqj" secondAttribute="top" constant="122" id="vXT-zP-1pa"/>
+                            <constraint firstItem="NDv-YY-9yr" firstAttribute="top" secondItem="SHo-ZU-kqj" secondAttribute="top" constant="55" id="JSM-4j-0Y2"/>
+                            <constraint firstItem="NDv-YY-9yr" firstAttribute="centerX" secondItem="SHo-ZU-kqj" secondAttribute="centerX" type="default" id="Mho-lX-MVt"/>
+                            <constraint firstItem="NDv-YY-9yr" firstAttribute="leading" secondItem="dnS-kQ-OWA" secondAttribute="leading" type="default" id="Rjl-8A-Orv"/>
+                            <constraint firstItem="NDv-YY-9yr" firstAttribute="trailing" secondItem="dnS-kQ-OWA" secondAttribute="trailing" type="default" id="bbj-eM-1JF"/>
+                            <constraint firstItem="dnS-kQ-OWA" firstAttribute="top" secondItem="SHo-ZU-kqj" secondAttribute="top" constant="201" id="hwr-tY-b01"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hB3-XH-ukX"/>
@@ -335,6 +327,10 @@
             <point key="canvasLocation" x="-939" y="980"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iTunesArtwork.png" width="512" height="512"/>
+        <image name="iTunesArtwork@2x.png" width="1024" height="1024"/>
+    </resources>
     <classes>
         <class className="AWBAddEntryViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AWBAddEntryViewController.h"/>
