@@ -44,7 +44,7 @@
   self.navigationItem.title = self.entry.name;
   self.dateLabel.text = [self.entry.date description];
   self.notesLabel.text = self.entry.note;
-  self.brewTimeLabel.text = [self.entry.brewTime stringValue];
+  self.brewTimeLabel.text = [[self.entry.brewTime stringValue] stringByAppendingString:@" minutes"];
   self.ratingLabel.text = [self.entry.rating stringValue];
 }
 

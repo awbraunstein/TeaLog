@@ -37,17 +37,8 @@
   // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
   self.navigationItem.rightBarButtonItem = self.editButtonItem;
   
-  self.entries = [[NSMutableArray alloc] init];
+  self.entries = [AWBLogSingleton sharedTeaLog].teaLog;
   
-  AWBTeaLogEntry * entry = [[AWBTeaLogEntry alloc] init];
-  entry.name = @"Iron Goddess Oolong";
-  entry.note = @"This tea has a very aromatic taste. An oolong to be sought after. Using the Hamptons honey was a good idea";
-  entry.location = CLLocationCoordinate2DMake(39.953689, -75.206410);
-  entry.date = [[NSDate alloc] init];
-  entry.brewTime = @3;
-  entry.rating = @80;
-  
-  [self.entries addObject:entry];
   [self.tableView reloadData];
 }
 
@@ -113,17 +104,21 @@
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
+  AWBTeaLogEntry *entryToMove = [self.entries objectAtIndex:fromIndexPath.row];
+  [self.entries removeObjectAtIndex:fromIndexPath.row];
+  [self.entries insertObject:entryToMove atIndex:toIndexPath.row];
+  
 }
 
 
-/*
+
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
  // Return NO if you do not want the item to be re-orderable.
  return YES;
 }
-*/
+
 
 #pragma mark - Segue
 

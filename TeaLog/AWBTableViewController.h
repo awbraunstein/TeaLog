@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AWBTeaLogEntry.h"
+#import "AWBLogSingleton.h"
 #import "AWBDetailViewController.h"
 
 @interface AWBTableViewController : UITableViewController
