@@ -2,23 +2,22 @@
 //  AWBTeaLogEntry.h
 //  TeaLog
 //
-//  Created by Andrew Braunstein on 2/28/13.
+//  Created by Andrew Braunstein on 3/23/13.
 //  Copyright (c) 2013 Andrew Braunstein. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreLocation/CoreLocation.h>
+#import <CoreData/CoreData.h>
 
-@interface AWBTeaLogEntry : NSObject
+@class AWBLocation;
 
-@property (strong, nonatomic) NSString * name;
-@property (strong, nonatomic) NSString * note;
-@property (strong, nonatomic) NSNumber * brewTime;
-@property (strong, nonatomic) NSNumber * rating;
+@interface AWBTeaLogEntry : NSManagedObject
 
-@property (strong, nonatomic) NSDate * date;
-@property CLLocationCoordinate2D location;
-
-
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * note;
+@property (nonatomic, retain) NSNumber * brewTime;
+@property (nonatomic, retain) NSNumber * rating;
+@property (nonatomic, retain) NSDate * timestamp;
+@property (nonatomic, retain) AWBLocation *location;
 
 @end

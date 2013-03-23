@@ -42,7 +42,7 @@
   }
   
   self.navigationItem.title = self.entry.name;
-  self.dateLabel.text = [self.entry.date description];
+  self.dateLabel.text = [self.entry.timestamp description];
   self.notesLabel.text = self.entry.note;
   self.brewTimeLabel.text = [[self.entry.brewTime stringValue] stringByAppendingString:@" minutes"];
   self.ratingLabel.text = [self.entry.rating stringValue];
@@ -67,7 +67,7 @@
 
 - (void) mapViewDidFinishLoadingMap:(MKMapView *)mapView {
   if (!self.mapLoaded) {
-    [self addPinToMapAtLocation:self.entry.location];
+    [self addPinToMapAtLocation:[self.entry.location getLocation]];
     self.mapLoaded = YES;
   }
 }

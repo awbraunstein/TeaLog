@@ -121,7 +121,7 @@
   AWBTeaLogEntry * entry = [[AWBTeaLogEntry alloc] init];
   entry.name = self.nameField.text;
   entry.note = self.notesField.text;
-  entry.location = self.location;
+  //entry.location = self.location;
   entry.brewTime = self.brewTime;
   entry.rating = self.rating;
   if ([entry.name isEqualToString:@""]) {

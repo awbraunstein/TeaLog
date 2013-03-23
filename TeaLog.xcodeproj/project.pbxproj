@@ -22,12 +22,16 @@
 		800F010616DFF72F002A740C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 800F00E116DFF72E002A740C /* Foundation.framework */; };
 		800F010E16DFF72F002A740C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 800F010C16DFF72F002A740C /* InfoPlist.strings */; };
 		800F011116DFF72F002A740C /* TeaLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 800F011016DFF72F002A740C /* TeaLogTests.m */; };
-		800F011C16DFFB9D002A740C /* AWBTeaLogEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 800F011B16DFFB9D002A740C /* AWBTeaLogEntry.m */; };
 		800F011F16DFFF4E002A740C /* AWBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 800F011E16DFFF4E002A740C /* AWBTableViewController.m */; };
 		800F012216DFFFC1002A740C /* AWBAddEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 800F012116DFFFC1002A740C /* AWBAddEntryViewController.m */; };
 		800F012416DFFFDF002A740C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 800F012316DFFFDF002A740C /* CoreLocation.framework */; };
 		800F012616DFFFE9002A740C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 800F012516DFFFE9002A740C /* MapKit.framework */; };
 		800F012916E00421002A740C /* AWBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 800F012816E00420002A740C /* AWBDetailViewController.m */; };
+		8086F8C816FE116A003C64BF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8086F8C716FE116A003C64BF /* CoreData.framework */; };
+		8086F8CB16FE11AC003C64BF /* TeaLog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8086F8C916FE11AC003C64BF /* TeaLog.xcdatamodeld */; };
+		8086F8E316FE1D3E003C64BF /* AWBLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8086F8E216FE1D3E003C64BF /* AWBLocation.m */; };
+		8086F93616FE20A3003C64BF /* AWBDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8086F93516FE20A3003C64BF /* AWBDataManager.m */; };
+		8086F93916FE27A1003C64BF /* AWBTeaLogEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8086F93816FE27A1003C64BF /* AWBTeaLogEntry.m */; };
 		80A76B7616E180A700F63890 /* AWBLogSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A76B7516E180A700F63890 /* AWBLogSingleton.m */; };
 		80C3FA8C16F11AA4001FE02D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C3FA8B16F11AA4001FE02D /* QuartzCore.framework */; };
 		80C3FA9816F270B3001FE02D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 80C3FA8E16F270B3001FE02D /* Icon-72.png */; };
@@ -75,8 +79,6 @@
 		800F010D16DFF72F002A740C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		800F010F16DFF72F002A740C /* TeaLogTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeaLogTests.h; sourceTree = "<group>"; };
 		800F011016DFF72F002A740C /* TeaLogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeaLogTests.m; sourceTree = "<group>"; };
-		800F011A16DFFB9D002A740C /* AWBTeaLogEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWBTeaLogEntry.h; sourceTree = "<group>"; };
-		800F011B16DFFB9D002A740C /* AWBTeaLogEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWBTeaLogEntry.m; sourceTree = "<group>"; };
 		800F011D16DFFF4E002A740C /* AWBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWBTableViewController.h; sourceTree = "<group>"; };
 		800F011E16DFFF4E002A740C /* AWBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWBTableViewController.m; sourceTree = "<group>"; };
 		800F012016DFFFC1002A740C /* AWBAddEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWBAddEntryViewController.h; sourceTree = "<group>"; };
@@ -85,21 +87,29 @@
 		800F012516DFFFE9002A740C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		800F012716E00420002A740C /* AWBDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWBDetailViewController.h; sourceTree = "<group>"; };
 		800F012816E00420002A740C /* AWBDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWBDetailViewController.m; sourceTree = "<group>"; };
+		8086F8C716FE116A003C64BF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8086F8CA16FE11AC003C64BF /* TeaLog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TeaLog.xcdatamodel; sourceTree = "<group>"; };
+		8086F8E116FE1D3E003C64BF /* AWBLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWBLocation.h; sourceTree = "<group>"; };
+		8086F8E216FE1D3E003C64BF /* AWBLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWBLocation.m; sourceTree = "<group>"; };
+		8086F93416FE20A3003C64BF /* AWBDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWBDataManager.h; sourceTree = "<group>"; };
+		8086F93516FE20A3003C64BF /* AWBDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWBDataManager.m; sourceTree = "<group>"; };
+		8086F93716FE27A1003C64BF /* AWBTeaLogEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWBTeaLogEntry.h; sourceTree = "<group>"; };
+		8086F93816FE27A1003C64BF /* AWBTeaLogEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWBTeaLogEntry.m; sourceTree = "<group>"; };
 		80A76B7416E180A700F63890 /* AWBLogSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWBLogSingleton.h; sourceTree = "<group>"; };
 		80A76B7516E180A700F63890 /* AWBLogSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWBLogSingleton.m; sourceTree = "<group>"; };
 		80C3FA8B16F11AA4001FE02D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		80C3FA8E16F270B3001FE02D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "TeaLog/App Icon [Rounded]/Icon-72.png"; sourceTree = "<group>"; };
-		80C3FA8F16F270B3001FE02D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "TeaLog/App Icon [Rounded]/Icon-72@2x.png"; sourceTree = "<group>"; };
-		80C3FA9016F270B3001FE02D /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "TeaLog/App Icon [Rounded]/Icon-Small-50.png"; sourceTree = "<group>"; };
-		80C3FA9116F270B3001FE02D /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50@2x.png"; path = "TeaLog/App Icon [Rounded]/Icon-Small-50@2x.png"; sourceTree = "<group>"; };
-		80C3FA9216F270B3001FE02D /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "TeaLog/App Icon [Rounded]/Icon-Small.png"; sourceTree = "<group>"; };
-		80C3FA9316F270B3001FE02D /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "TeaLog/App Icon [Rounded]/Icon-Small@2x.png"; sourceTree = "<group>"; };
-		80C3FA9416F270B3001FE02D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = "TeaLog/App Icon [Rounded]/Icon.png"; sourceTree = "<group>"; };
-		80C3FA9516F270B3001FE02D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "TeaLog/App Icon [Rounded]/Icon@2x.png"; sourceTree = "<group>"; };
-		80C3FA9616F270B3001FE02D /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = "TeaLog/App Icon [Rounded]/iTunesArtwork.png"; sourceTree = "<group>"; };
-		80C3FA9716F270B3001FE02D /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "TeaLog/App Icon [Rounded]/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		80C3FAA216F270F8001FE02D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		80C3FAA416F27122001FE02D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		80C3FA8E16F270B3001FE02D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "App Icon [Rounded]/Icon-72.png"; sourceTree = "<group>"; };
+		80C3FA8F16F270B3001FE02D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "App Icon [Rounded]/Icon-72@2x.png"; sourceTree = "<group>"; };
+		80C3FA9016F270B3001FE02D /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "App Icon [Rounded]/Icon-Small-50.png"; sourceTree = "<group>"; };
+		80C3FA9116F270B3001FE02D /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50@2x.png"; path = "App Icon [Rounded]/Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		80C3FA9216F270B3001FE02D /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "App Icon [Rounded]/Icon-Small.png"; sourceTree = "<group>"; };
+		80C3FA9316F270B3001FE02D /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "App Icon [Rounded]/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		80C3FA9416F270B3001FE02D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = "App Icon [Rounded]/Icon.png"; sourceTree = "<group>"; };
+		80C3FA9516F270B3001FE02D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "App Icon [Rounded]/Icon@2x.png"; sourceTree = "<group>"; };
+		80C3FA9616F270B3001FE02D /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = "App Icon [Rounded]/iTunesArtwork.png"; sourceTree = "<group>"; };
+		80C3FA9716F270B3001FE02D /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "App Icon [Rounded]/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		80C3FAA216F270F8001FE02D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		80C3FAA416F27122001FE02D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8086F8C816FE116A003C64BF /* CoreData.framework in Frameworks */,
 				80C3FA8C16F11AA4001FE02D /* QuartzCore.framework in Frameworks */,
 				800F012616DFFFE9002A740C /* MapKit.framework in Frameworks */,
 				800F012416DFFFDF002A740C /* CoreLocation.framework in Frameworks */,
@@ -132,18 +143,6 @@
 		800F00D316DFF72E002A740C = {
 			isa = PBXGroup;
 			children = (
-				80C3FAA416F27122001FE02D /* Icon@2x.png */,
-				80C3FA8E16F270B3001FE02D /* Icon-72.png */,
-				80C3FA8F16F270B3001FE02D /* Icon-72@2x.png */,
-				80C3FA9016F270B3001FE02D /* Icon-Small-50.png */,
-				80C3FA9116F270B3001FE02D /* Icon-Small-50@2x.png */,
-				80C3FA9216F270B3001FE02D /* Icon-Small.png */,
-				80C3FA9316F270B3001FE02D /* Icon-Small@2x.png */,
-				80C3FA9416F270B3001FE02D /* Icon.png */,
-				80C3FA9516F270B3001FE02D /* Icon@2x.png */,
-				80C3FA9616F270B3001FE02D /* iTunesArtwork.png */,
-				80C3FA9716F270B3001FE02D /* iTunesArtwork@2x.png */,
-				80C3FAA216F270F8001FE02D /* Icon.png */,
 				800F00E516DFF72E002A740C /* TeaLog */,
 				800F010916DFF72F002A740C /* TeaLogTests */,
 				800F00DE16DFF72E002A740C /* Frameworks */,
@@ -163,6 +162,7 @@
 		800F00DE16DFF72E002A740C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8086F8C716FE116A003C64BF /* CoreData.framework */,
 				80C3FA8B16F11AA4001FE02D /* QuartzCore.framework */,
 				800F012516DFFFE9002A740C /* MapKit.framework */,
 				800F012316DFFFDF002A740C /* CoreLocation.framework */,
@@ -178,8 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				800F00EE16DFF72E002A740C /* AWBAppDelegate.h */,
-				800F011A16DFFB9D002A740C /* AWBTeaLogEntry.h */,
-				800F011B16DFFB9D002A740C /* AWBTeaLogEntry.m */,
 				800F00EF16DFF72E002A740C /* AWBAppDelegate.m */,
 				800F00F716DFF72E002A740C /* MainStoryboard.storyboard */,
 				800F012016DFFFC1002A740C /* AWBAddEntryViewController.h */,
@@ -190,6 +188,13 @@
 				800F011E16DFFF4E002A740C /* AWBTableViewController.m */,
 				800F012716E00420002A740C /* AWBDetailViewController.h */,
 				800F012816E00420002A740C /* AWBDetailViewController.m */,
+				8086F93416FE20A3003C64BF /* AWBDataManager.h */,
+				8086F93516FE20A3003C64BF /* AWBDataManager.m */,
+				8086F8E116FE1D3E003C64BF /* AWBLocation.h */,
+				8086F8E216FE1D3E003C64BF /* AWBLocation.m */,
+				8086F8C916FE11AC003C64BF /* TeaLog.xcdatamodeld */,
+				8086F93716FE27A1003C64BF /* AWBTeaLogEntry.h */,
+				8086F93816FE27A1003C64BF /* AWBTeaLogEntry.m */,
 				800F00E616DFF72E002A740C /* Supporting Files */,
 			);
 			path = TeaLog;
@@ -198,6 +203,18 @@
 		800F00E616DFF72E002A740C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				80C3FAA416F27122001FE02D /* Icon@2x.png */,
+				80C3FA8E16F270B3001FE02D /* Icon-72.png */,
+				80C3FA8F16F270B3001FE02D /* Icon-72@2x.png */,
+				80C3FA9016F270B3001FE02D /* Icon-Small-50.png */,
+				80C3FA9116F270B3001FE02D /* Icon-Small-50@2x.png */,
+				80C3FA9216F270B3001FE02D /* Icon-Small.png */,
+				80C3FA9316F270B3001FE02D /* Icon-Small@2x.png */,
+				80C3FA9416F270B3001FE02D /* Icon.png */,
+				80C3FA9516F270B3001FE02D /* Icon@2x.png */,
+				80C3FA9616F270B3001FE02D /* iTunesArtwork.png */,
+				80C3FA9716F270B3001FE02D /* iTunesArtwork@2x.png */,
+				80C3FAA216F270F8001FE02D /* Icon.png */,
 				800F00E716DFF72E002A740C /* TeaLog-Info.plist */,
 				800F00E816DFF72E002A740C /* InfoPlist.strings */,
 				800F00EB16DFF72E002A740C /* main.m */,
@@ -353,11 +370,14 @@
 			files = (
 				800F00EC16DFF72E002A740C /* main.m in Sources */,
 				800F00F016DFF72E002A740C /* AWBAppDelegate.m in Sources */,
-				800F011C16DFFB9D002A740C /* AWBTeaLogEntry.m in Sources */,
 				800F011F16DFFF4E002A740C /* AWBTableViewController.m in Sources */,
 				800F012216DFFFC1002A740C /* AWBAddEntryViewController.m in Sources */,
 				800F012916E00421002A740C /* AWBDetailViewController.m in Sources */,
 				80A76B7616E180A700F63890 /* AWBLogSingleton.m in Sources */,
+				8086F8CB16FE11AC003C64BF /* TeaLog.xcdatamodeld in Sources */,
+				8086F8E316FE1D3E003C64BF /* AWBLocation.m in Sources */,
+				8086F93616FE20A3003C64BF /* AWBDataManager.m in Sources */,
+				8086F93916FE27A1003C64BF /* AWBTeaLogEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +570,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8086F8C916FE11AC003C64BF /* TeaLog.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8086F8CA16FE11AC003C64BF /* TeaLog.xcdatamodel */,
+			);
+			currentVersion = 8086F8CA16FE11AC003C64BF /* TeaLog.xcdatamodel */;
+			path = TeaLog.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 800F00D416DFF72E002A740C /* Project object */;
 }

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "AWBTeaLogEntry.h"
+#import "AWBLocation.h"
 
 @interface AWBDetailViewController : UIViewController <MKMapViewDelegate>
 
