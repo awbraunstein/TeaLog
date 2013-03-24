@@ -10,7 +10,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <QuartzCore/QuartzCore.h> 
 #import "AWBTeaLogEntry.h"
-#import "AWBLogSingleton.h"
+#import "AWBDataManager.h"
+#import "AWBAppDelegate.h"
 
 @interface AWBAddEntryViewController : UIViewController <UITextViewDelegate, UITextFieldDelegate, CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameField;

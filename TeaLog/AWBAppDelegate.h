@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AWBDataManager.h"
 
 @interface AWBAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) AWBDataManager * manager;
 
 @end

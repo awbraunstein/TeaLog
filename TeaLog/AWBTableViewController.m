@@ -12,7 +12,8 @@
 
 @interface AWBTableViewController ()
 
-@property (nonatomic, strong) NSMutableArray * entries;
+@property (nonatomic, strong) NSArray * entries;
+@property (nonatomic, strong) AWBDataManager * manager;
 
 @end
 
@@ -37,7 +38,9 @@
   // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
   self.navigationItem.rightBarButtonItem = self.editButtonItem;
   
-  self.entries = [AWBLogSingleton sharedTeaLog].teaLog;
+  self.manager = [(AWBAppDelegate *)[[UIApplication sharedApplication] delegate] manager];
+  
+  self.entries = [self.manager getAllEntries];
   
   [self.tableView reloadData];
 }
@@ -88,19 +91,25 @@
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+  [tableView beginUpdates];
   if (editingStyle == UITableViewCellEditingStyleDelete) {
     // Delete the row from the data source
-    [self.entries removeObjectAtIndex:indexPath.row];
+    [self.manager deleteEntry:self.entries[indexPath.row]];
     
     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+
+    self.entries = [self.manager getAllEntries];
+    
+    [self.tableView reloadData];
   }
   else if (editingStyle == UITableViewCellEditingStyleInsert) {
     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
   }
+  [tableView endUpdates];
 }
 
 
-
+/*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
@@ -109,14 +118,14 @@
   [self.entries insertObject:entryToMove atIndex:toIndexPath.row];
   
 }
-
+*/
 
 
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
  // Return NO if you do not want the item to be re-orderable.
- return YES;
+ return NO;
 }
 
 

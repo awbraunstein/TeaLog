@@ -32,7 +32,6 @@
 		8086F8E316FE1D3E003C64BF /* AWBLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8086F8E216FE1D3E003C64BF /* AWBLocation.m */; };
 		8086F93616FE20A3003C64BF /* AWBDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8086F93516FE20A3003C64BF /* AWBDataManager.m */; };
 		8086F93916FE27A1003C64BF /* AWBTeaLogEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8086F93816FE27A1003C64BF /* AWBTeaLogEntry.m */; };
-		80A76B7616E180A700F63890 /* AWBLogSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A76B7516E180A700F63890 /* AWBLogSingleton.m */; };
 		80C3FA8C16F11AA4001FE02D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C3FA8B16F11AA4001FE02D /* QuartzCore.framework */; };
 		80C3FA9816F270B3001FE02D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 80C3FA8E16F270B3001FE02D /* Icon-72.png */; };
 		80C3FA9916F270B3001FE02D /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80C3FA8F16F270B3001FE02D /* Icon-72@2x.png */; };
@@ -95,8 +94,6 @@
 		8086F93516FE20A3003C64BF /* AWBDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWBDataManager.m; sourceTree = "<group>"; };
 		8086F93716FE27A1003C64BF /* AWBTeaLogEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWBTeaLogEntry.h; sourceTree = "<group>"; };
 		8086F93816FE27A1003C64BF /* AWBTeaLogEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWBTeaLogEntry.m; sourceTree = "<group>"; };
-		80A76B7416E180A700F63890 /* AWBLogSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWBLogSingleton.h; sourceTree = "<group>"; };
-		80A76B7516E180A700F63890 /* AWBLogSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWBLogSingleton.m; sourceTree = "<group>"; };
 		80C3FA8B16F11AA4001FE02D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		80C3FA8E16F270B3001FE02D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "App Icon [Rounded]/Icon-72.png"; sourceTree = "<group>"; };
 		80C3FA8F16F270B3001FE02D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "App Icon [Rounded]/Icon-72@2x.png"; sourceTree = "<group>"; };
@@ -182,8 +179,6 @@
 				800F00F716DFF72E002A740C /* MainStoryboard.storyboard */,
 				800F012016DFFFC1002A740C /* AWBAddEntryViewController.h */,
 				800F012116DFFFC1002A740C /* AWBAddEntryViewController.m */,
-				80A76B7416E180A700F63890 /* AWBLogSingleton.h */,
-				80A76B7516E180A700F63890 /* AWBLogSingleton.m */,
 				800F011D16DFFF4E002A740C /* AWBTableViewController.h */,
 				800F011E16DFFF4E002A740C /* AWBTableViewController.m */,
 				800F012716E00420002A740C /* AWBDetailViewController.h */,
@@ -192,9 +187,9 @@
 				8086F93516FE20A3003C64BF /* AWBDataManager.m */,
 				8086F8E116FE1D3E003C64BF /* AWBLocation.h */,
 				8086F8E216FE1D3E003C64BF /* AWBLocation.m */,
-				8086F8C916FE11AC003C64BF /* TeaLog.xcdatamodeld */,
 				8086F93716FE27A1003C64BF /* AWBTeaLogEntry.h */,
 				8086F93816FE27A1003C64BF /* AWBTeaLogEntry.m */,
+				8086F8C916FE11AC003C64BF /* TeaLog.xcdatamodeld */,
 				800F00E616DFF72E002A740C /* Supporting Files */,
 			);
 			path = TeaLog;
@@ -373,7 +368,6 @@
 				800F011F16DFFF4E002A740C /* AWBTableViewController.m in Sources */,
 				800F012216DFFFC1002A740C /* AWBAddEntryViewController.m in Sources */,
 				800F012916E00421002A740C /* AWBDetailViewController.m in Sources */,
-				80A76B7616E180A700F63890 /* AWBLogSingleton.m in Sources */,
 				8086F8CB16FE11AC003C64BF /* TeaLog.xcdatamodeld in Sources */,
 				8086F8E316FE1D3E003C64BF /* AWBLocation.m in Sources */,
 				8086F93616FE20A3003C64BF /* AWBDataManager.m in Sources */,

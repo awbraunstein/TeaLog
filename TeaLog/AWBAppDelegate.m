@@ -13,7 +13,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    return YES;
+  self.manager = [[AWBDataManager alloc] init];
+  return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

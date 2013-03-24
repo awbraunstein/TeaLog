@@ -117,6 +117,7 @@
 
 - (IBAction)submitButton:(UIButton *)sender {
   
+  /*
   NSMutableArray * log = [AWBLogSingleton sharedTeaLog].teaLog;
   AWBTeaLogEntry * entry = [[AWBTeaLogEntry alloc] init];
   entry.name = self.nameField.text;
@@ -129,6 +130,23 @@
   }
   
   [log addObject: entry];
+
+   
+   */
+  
+  NSLog(@"Saving");
+  
+  AWBDataManager * manager = [(AWBAppDelegate *)[[UIApplication sharedApplication] delegate] manager];
+  
+  if ([self.nameField.text isEqualToString:@""]) {
+    self.nameField.text = @"Untitled";
+  }
+  
+  BOOL result = [manager addEntryWithName:self.nameField.text note:self.notesField.text brewTime:self.brewTime rating:self.rating location:self.location];
+  
+  if (!result) {
+    NSLog(@"Error saving");
+  }
   [self.navigationController popViewControllerAnimated:YES];
 }
 
